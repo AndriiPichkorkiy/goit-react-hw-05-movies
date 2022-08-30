@@ -24,13 +24,13 @@ const apiMovies = {
     return await this.doFetch(path);
   },
 
-  async getCredits(id) {
-    const path = `/movie/${id}/credits?`;
+  async getCredits(id, type) {
+    const path = `/${type}/${id}/credits?`;
     return await this.doFetch(path);
   },
 
-  async getReviews(id) {
-    const path = `/movie/${id}/reviews?`;
+  async getReviews(id, type) {
+    const path = `/${type}/${id}/reviews?`;
     return await this.doFetch(path);
   },
 

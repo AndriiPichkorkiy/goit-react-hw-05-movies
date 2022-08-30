@@ -7,7 +7,7 @@ import { useContext } from "react";
 import PlugNoInfo from "./PlugNoInfo";
 
 const Reviews = () => {
-    const { id } = useParams();
+    const { id, type } = useParams();
     const [reviews, setReviews] = useState(null);
 
     const { lang } = useContext(LangContext);
@@ -17,8 +17,8 @@ const Reviews = () => {
     const textContent = lang === 'en' ? "Content" : "Зміст";
 
     useEffect(() => {
-        apiMovies.getReviews(id).then(response => response.json()).then(data => setReviews(data.results));
-    }, [id])
+        apiMovies.getReviews(id, type).then(response => response.json()).then(data => setReviews(data.results));
+    }, [id, type, lang])
 
     if (!reviews) return null;
 

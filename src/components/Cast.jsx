@@ -9,7 +9,7 @@ import { useContext } from "react";
 import PlugNoInfo from "./PlugNoInfo";
 
 const Cast = () => {
-    const { id } = useParams();
+    const { id, type } = useParams();
     const [credits, setCredits] = useState(null);
 
     const { lang } = useContext(LangContext);
@@ -17,7 +17,7 @@ const Cast = () => {
     const textCharacter = lang === 'en' ? "Character" : "Роль";
 
     useEffect(() => {
-        apiMovies.getCredits(id).then(response => response.json()).then(data => setCredits(data.cast));
+        apiMovies.getCredits(id, type).then(response => response.json()).then(data => setCredits(data.cast));
     }, [id])
 
     if (!credits) return null;

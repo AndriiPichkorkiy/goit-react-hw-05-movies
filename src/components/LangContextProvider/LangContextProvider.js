@@ -4,7 +4,7 @@ import apiMovies from 'tools/apiMovies';
 const LangContext = createContext();
 
 export default function LangContextProvider({ children }) {
-  const [lang, setLang] = useState('en');
+  const [lang, setLang] = useState('uk');
 
   const toggleLang = () => {
     setLang(preValue => (preValue === 'en' ? 'uk' : 'en'));

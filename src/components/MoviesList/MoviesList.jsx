@@ -7,7 +7,7 @@ import { useContext } from "react";
 
 const MoviesList = ({ movies, from }) => {
     const { lang } = useContext(LangContext);
-
+    console.log(movies)
     const textReleaseDate = lang === 'en' ? "Release date" : "Прем'єра";
     const textRaiting = lang === 'en' ? "Raiting" : "Рейтинг";
     const listOfMovies = movies.map(item => {
