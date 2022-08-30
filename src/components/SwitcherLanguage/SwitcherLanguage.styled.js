@@ -1,13 +1,16 @@
 const { default: styled } = require('styled-components');
 
 const Button = styled.button`
-  position: absolute;
+  cursor: pointer;
+  display: inline-block;
+  margin-left: 16px;
+  /* margin-bottom: 16px; */
   right: 64px;
   top: 80px;
   width: 128px;
   font-size: 20px;
   text-decoration: none;
-  background-color: #ff6d00;
+  background: linear-gradient(45deg, rgb(217, 27, 96), rgb(255, 109, 0));
   color: white;
 
   border: 0;
