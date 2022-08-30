@@ -6,21 +6,11 @@ import { useSearchParams, useLocation } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-import { LangContext } from "components/LangContextProvider/";
-import { useContext } from "react";
-
 const Movies = () => {
     const [searchMovies, setSearchMovies] = useState([]);
     const [searchParams, setSearchParams] = useSearchParams();
     const query = searchParams.get("query") || '';
     const location = useLocation();
-
-    const { lang } = useContext(LangContext);
-
-    //do ones
-    useEffect(() => {
-        if (query) onSubmit();
-    }, [lang])
 
     const onChangeInput = (value) => {
         setSearchParams({ query: value })
@@ -32,6 +22,11 @@ const Movies = () => {
             setSearchMovies(data.results)
         });
     }
+    //do ones
+    useEffect(() => {
+        if (query) onSubmit();
+        // eslint-disable-next-line
+    }, [])
 
     return (
         <>

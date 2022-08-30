@@ -7,11 +7,11 @@ import { BrowserRouter } from 'react-router-dom';
 import LangContextProvider from './components/LangContextProvider';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  // <React.StrictMode>
-  <LangContextProvider>
-    <BrowserRouter basename="goit-react-hw-05-movies">
-      <App />
-    </BrowserRouter>
-  </LangContextProvider>
-  // </React.StrictMode>
+  <React.StrictMode>
+    <LangContextProvider>
+      <BrowserRouter basename="goit-react-hw-05-movies">
+        <App />
+      </BrowserRouter>
+    </LangContextProvider>
+  </React.StrictMode>
 );
