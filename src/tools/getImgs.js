@@ -25,8 +25,6 @@ const imgApi = {
   },
 
   imgOnError({ target }) {
-    console.log('!!!');
-    console.log(target);
     target.src = img404;
   },
 };
