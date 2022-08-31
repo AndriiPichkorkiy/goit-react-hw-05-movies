@@ -1,9 +1,7 @@
 const apiMovies = {
   root: 'https://api.themoviedb.org/3',
   key: 'api_key=5108aaa75445a4269ccf5b5cfc34d595',
-  language: '&language=en',
-
-  // test: 'https://api.themoviedb.org/3/movie/550?api_key=5108aaa75445a4269ccf5b5cfc34d595',
+  language: '&language=uk',
 
   changeLanguage(lang) {
     apiMovies.language = `&language=${lang}`;
