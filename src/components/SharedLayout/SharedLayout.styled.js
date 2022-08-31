@@ -12,7 +12,7 @@ const Header = styled.header`
 
   & .logo {
     margin: 32px;
-    width: 200px;
+    width: 128px;
   }
 
   & ~ .container {

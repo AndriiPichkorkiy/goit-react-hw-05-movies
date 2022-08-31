@@ -4,6 +4,7 @@ const Button = styled.button`
   cursor: pointer;
   display: inline-block;
   margin-left: 16px;
+  margin-bottom: 16px;
   /* margin-bottom: 16px; */
   right: 64px;
   top: 80px;
