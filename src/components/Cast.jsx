@@ -18,7 +18,7 @@ const Cast = () => {
 
     useEffect(() => {
         apiMovies.getCredits(id, type).then(response => response.json()).then(data => setCredits(data.cast));
-    }, [id])
+    }, [id, type])
 
     if (!credits) return null;
 
